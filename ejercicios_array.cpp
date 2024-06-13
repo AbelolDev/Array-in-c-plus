@@ -164,5 +164,49 @@ vector<int> Duplicados(){
 
 int main(){
     
+    int opcion;
+    bool validacion_salida = false;
+
+    while (validacion_salida == false)
+    {
+        cout << "Bienvenido al menu de arrays" << endl;
+        cout << "1-) Suma de arreglos" << endl;
+        cout << "2-) Promedio de arreglos" << endl;
+        cout << "3-) Mayor y menor elemento de un arreglo" << endl;
+        cout << "4-) Eliminar elementos duplicados de un arreglo" << endl;
+        cout << "5-) Salir" << endl;
+        cout << ">>> ";
+        cin >> opcion;
+
+        switch (opcion)
+        {
+        case 1:
+            SumaArreglos();
+            break;
+
+        case 2:
+            PromedioArreglos();
+            break;
+        
+        case 3:
+            MayorMenorArreglos();
+            break;
+        
+        case 4:
+            Duplicados();
+            break;
+
+        case 5:
+            cout << "Hasta pronto" << endl;
+            validacion_salida = true;
+            break;
+        
+        default:
+            cout << "Opción no válida" << endl;
+            break;
+        }
+    }
+    
+
     return 0;
 }
